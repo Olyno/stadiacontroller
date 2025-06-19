@@ -134,8 +134,8 @@ func ParseReport(data []byte, report *Xbox360ControllerReport) error {
 		report.MaybeSetButton(Xbox360ControllerButtonStart, (b&0b0010_0000) != 0)
 		report.MaybeSetButton(Xbox360ControllerButtonGuide, (b&0b0001_0000) != 0)
 
-		report.Assistant = (b & 0b0000_0010) != 0
-		report.Capture = (b & 0b0000_0001) != 0
+		report.Assistant = (b & 0b0000_0001) != 0
+		report.Capture = (b & 0b0000_0010) != 0
 
 		// Update DPad buttons.
 		switch a {
